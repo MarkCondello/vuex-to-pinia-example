@@ -1,20 +1,33 @@
 <script>
 import EventCard from '../components/EventCard.vue'
+import { useEventStore } from '../stores/EventStore'
 export default {
   components: {
     EventCard
   },
+  setup(){
+    const EventList = useEventStore()
+    return { EventList }
+  },
   created() {
-    this.$store.dispatch('fetchEvents').catch(error => {
+    this.EventList.fetchEvents()
+    .catch(error => {
       this.$router.push({
         name: 'ErrorDisplay',
         params: { error: error }
       })
     })
+    // this.$store.dispatch('fetchEvents').catch(error => {
+    //   this.$router.push({
+    //     name: 'ErrorDisplay',
+    //     params: { error: error }
+    //   })
+    // })
   },
   computed: {
     events() {
-      return this.$store.state.events
+      // return this.$store.state.events
+      return this.EventList.events
     }
   }
 }

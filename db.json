@@ -29,6 +29,26 @@
       "date": "July 22, 2022",
       "time": "11:00",
       "organizer": "Carey Wales"
+    },
+    {
+      "id": "bc7a969f-115b-489b-b0d6-09696cddb2e4",
+      "category": "nature",
+      "title": "Foo",
+      "description": "Doo barr",
+      "location": "Home",
+      "date": "123123",
+      "time": "123123",
+      "organizer": "Mark Condello"
+    },
+    {
+      "id": "ba2fc906-9f2a-42c4-b8a7-d8d8820b0b8d",
+      "category": "animal welfare",
+      "title": "Foo bar bazz",
+      "description": "Test 123",
+      "location": "Somewhere",
+      "date": "123123",
+      "time": "321321",
+      "organizer": "Mark Condello"
     }
   ]
 }
