@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore, acceptHMRUpdate } from 'pinia'
 import EventService from '../services/EventService'
 
 export const useEventStore = defineStore('EventStore', {
@@ -43,3 +43,7 @@ export const useEventStore = defineStore('EventStore', {
         //   }
     }
 })
+
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useEventStore, import.meta.hot))
+}
